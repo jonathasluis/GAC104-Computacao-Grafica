@@ -9,12 +9,6 @@ BINS = teste
 
 all: $(BINS)
 
-camera.orig: camera.orig.o transformacao.o ponto.o
-	$(CXX) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
-
-movelight: movelight.o
-	$(CXX) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
-
 clean:
 	rm -f *.o $(BINS)
 
